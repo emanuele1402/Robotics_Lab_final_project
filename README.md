@@ -2,7 +2,7 @@ Use Dockerfile in this repository.
 
 Put final_project and and [aruco_ros](https://github.com/pal-robotics/aruco_ros) in ros2_ws/src
 ```
-git clone https://github.com/emanudevito14/final_project.git
+git clone https://github.com/emanuele1402/Robotics_Lab_final_project.git
 ```
 In the terminal
 ```
