@@ -1,0 +1,5 @@
+kuka_ns:
+  kuka_action_server:
+    ros__parameters:
+      cmd_interface: "velocity"
+      Kp: 5.0

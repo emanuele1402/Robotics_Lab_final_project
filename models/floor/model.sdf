@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="floor">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <collision name="collision">
+        <geometry>
+            <plane>
+                <normal>0 0 1</normal>
+                <size>20 20</size>
+            </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+            <mesh>
+              <uri>
+                model://floor/mesh/floor.stl
+              </uri>
+              <scale>
+                0.25 0.18 0.1
+              </scale>
+            </mesh>
+        </geometry>
+        <material>
+	    <ambient>0.5 0.5 0.5 1</ambient>
+	    <diffuse>0.5 0.5 0.5 1</diffuse>
+	    <specular>0.1 0.1 0.1 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

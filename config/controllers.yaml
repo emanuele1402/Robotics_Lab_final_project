@@ -1,0 +1,49 @@
+kuka_ns: 
+  controller_manager:
+    ros__parameters:
+      update_rate: 225
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+      kuka_arm_controller:
+        type: position_controllers/JointGroupPositionController
+      kuka_velocity_controller:
+        type: velocity_controllers/JointGroupVelocityController
+      effort_controller:
+        type: effort_controllers/JointGroupEffortController
+
+  kuka_arm_controller:
+    ros__parameters:
+      joints: [joint0, joint1, joint2, joint3, joint4]
+      command_interfaces: [position]
+      state_interfaces: [position, velocity]
+
+  kuka_velocity_controller:
+    ros__parameters:
+      joints: [joint0, joint1, joint2, joint3, joint4]
+      command_interfaces: [velocity]
+      state_interfaces: [position, velocity]
+
+  effort_controller:
+    ros__parameters:
+      joints: [joint0, joint1, joint2, joint3, joint4]
+      command_interfaces: [effort]
+      state_interfaces: [position, velocity]
+
+piston_ns:
+  controller_manager:
+    ros__parameters:
+      update_rate: 100
+      joint_state_broadcaster:
+        type: joint_state_broadcaster/JointStateBroadcaster
+      piston_controller:
+        type: effort_controllers/JointGroupEffortController
+
+  piston_controller:
+    ros__parameters:
+      joints:
+        - pusher_joint
+      command_interfaces:
+        - effort
+      state_interfaces:
+        - position
+        - velocity
